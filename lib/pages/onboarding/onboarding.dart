@@ -1,3 +1,4 @@
+import 'package:delayed_display/delayed_display.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -33,34 +34,45 @@ Widget boxForDetailAndGetStart(context) {
       padding: const EdgeInsets.all(10),
       margin: const EdgeInsets.symmetric(horizontal: 10),
       child: Column(children: [
-        Padding(
-          padding: const EdgeInsets.only(top: 5),
-          child: Text(
-            'Knowledge On the Go:\nYour Personal\nLearing Companion',
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+        const Padding(
+          padding: EdgeInsets.only(top: 5),
+          child: DelayedDisplay(
+            delay: Duration(seconds: 1),
+            child: Text(
+              'Knowledge On the Go:\nYour Personal\nLearing Companion',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            ),
           ),
         ),
-        Padding(
+        const Padding(
           padding: EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-          child: Text(
-              "Transform idle moments into learning opportunities. Explore a vast array of courses right at your fingertips.",
-              textAlign: TextAlign.center,
-              style: TextStyle(color: Color(0xFF838383))),
+          child: DelayedDisplay(
+            delay: Duration(seconds: 2),
+            child: Text(
+                "Transform idle moments into learning opportunities. Explore a vast array of courses right at your fingertips.",
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Color(0xFF838383))),
+          ),
         ),
-        Container(
-          margin: EdgeInsets.only(top: 6, bottom: 10),
-          width: 200,
-          height: 45,
-          child: ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
-              onPressed: () {},
-              child: Center(
-                  child: Text("Get Started",
-                      style: TextStyle(
-                          color: Color(0xFFE4F757),
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold)))),
+        DelayedDisplay(
+          delay: const Duration(seconds: 3),
+          child: Container(
+            margin: const EdgeInsets.only(top: 6, bottom: 10),
+            width: 250,
+            height: 45,
+            child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.black,
+                    foregroundColor: Colors.white),
+                onPressed: () {},
+                child: const Center(
+                    child: Text("Get Started",
+                        style: TextStyle(
+                            color: Color(0xFFE4F757),
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold)))),
+          ),
         )
       ]));
 }
