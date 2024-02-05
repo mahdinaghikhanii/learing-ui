@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:learing/pages/detail/detail.dart';
 
 import 'widgets/slider.dart';
 
@@ -153,113 +154,123 @@ Widget inProgress(context) {
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(24)),
               width: MediaQuery.sizeOf(context).width,
-              child: Row(mainAxisAlignment: MainAxisAlignment.start, children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 12, left: 10),
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          "Fundamentals of UX\nDesign (Google)",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black,
-                              fontSize: 20),
-                        ),
-                        const SizedBox(height: 4),
-                        const Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Offered by:",
-                              style: TextStyle(color: Color(0xFFA8A8A8)),
-                            ),
-                            Text("Google",
-                                style: TextStyle(color: Colors.black)),
-                          ],
-                        ),
-                        const SizedBox(height: 10),
-                        Row(
-                          children: [
-                            Container(
-                              margin: const EdgeInsets.only(right: 4),
-                              padding: const EdgeInsets.only(
-                                  top: 2, bottom: 2, left: 8, right: 8),
-                              height: 24,
-                              decoration: BoxDecoration(
-                                  color: const Color(0xFFFDFFB6),
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: const Text(
-                                "UX Desing",
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 12),
-                              ),
-                            ),
-                            Container(
-                              margin: const EdgeInsets.only(right: 4),
-                              padding: const EdgeInsets.only(
-                                  top: 2, bottom: 2, left: 8, right: 8),
-                              height: 24,
-                              decoration: BoxDecoration(
-                                  color: const Color(0xFFBDB2FF),
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: const Text(
-                                "Ui/UX",
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 12),
-                              ),
-                            ),
-                            Container(
-                              margin: const EdgeInsets.only(right: 4),
-                              padding: const EdgeInsets.only(
-                                  top: 2, bottom: 2, left: 8, right: 8),
-                              height: 24,
-                              decoration: BoxDecoration(
-                                  color: const Color(0xFFFFADAD),
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: const Text(
-                                "Desi..",
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 12),
-                              ),
-                            )
-                          ],
-                        ),
-                        Container(
-                          width: 190,
-                          height: 36,
-                          decoration: BoxDecoration(
-                              color: const Color(0xFFE4F757),
-                              borderRadius: BorderRadius.circular(10)),
-                          margin: const EdgeInsets.only(
-                            top: 10,
+              child: InkWell(
+                onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const DetailPage())),
+                child:
+                    Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 12, left: 10),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            "Fundamentals of UX\nDesign (Google)",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                                fontSize: 20),
                           ),
-                          child: const Center(
-                            child: Text(
-                              "View Details",
-                              style: TextStyle(color: Colors.black),
-                            ),
+                          const SizedBox(height: 4),
+                          const Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Offered by:",
+                                style: TextStyle(color: Color(0xFFA8A8A8)),
+                              ),
+                              Text("Google",
+                                  style: TextStyle(color: Colors.black)),
+                            ],
                           ),
-                        )
-                      ]),
-                ),
-                const Spacer(),
-                Padding(
-                  padding: const EdgeInsets.only(right: 12, top: 0),
-                  child: Image.asset(
-                    'assets/1.png',
-                    // width: 132,
-                    height: 156,
-                    fit: BoxFit.cover,
+                          const SizedBox(height: 10),
+                          Row(
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.only(right: 4),
+                                padding: const EdgeInsets.only(
+                                    top: 2, bottom: 2, left: 8, right: 8),
+                                height: 24,
+                                decoration: BoxDecoration(
+                                    color: const Color(0xFFFDFFB6),
+                                    borderRadius: BorderRadius.circular(10)),
+                                child: const Text(
+                                  "UX Desing",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 12),
+                                ),
+                              ),
+                              Container(
+                                margin: const EdgeInsets.only(right: 4),
+                                padding: const EdgeInsets.only(
+                                    top: 2, bottom: 2, left: 8, right: 8),
+                                height: 24,
+                                decoration: BoxDecoration(
+                                    color: const Color(0xFFBDB2FF),
+                                    borderRadius: BorderRadius.circular(10)),
+                                child: const Text(
+                                  "Ui/UX",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 12),
+                                ),
+                              ),
+                              Container(
+                                margin: const EdgeInsets.only(right: 4),
+                                padding: const EdgeInsets.only(
+                                    top: 2, bottom: 2, left: 8, right: 8),
+                                height: 24,
+                                decoration: BoxDecoration(
+                                    color: const Color(0xFFFFADAD),
+                                    borderRadius: BorderRadius.circular(10)),
+                                child: const Text(
+                                  "Desi..",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 12),
+                                ),
+                              )
+                            ],
+                          ),
+                          Container(
+                            width: 190,
+                            height: 36,
+                            decoration: BoxDecoration(
+                                color: const Color(0xFFE4F757),
+                                borderRadius: BorderRadius.circular(10)),
+                            margin: const EdgeInsets.only(
+                              top: 10,
+                            ),
+                            child: const Center(
+                              child: Text(
+                                "View Details",
+                                style: TextStyle(color: Colors.black),
+                              ),
+                            ),
+                          )
+                        ]),
                   ),
-                )
-              ]));
+                  const Spacer(),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 12, top: 0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Image.asset(
+                        index == 1 ? "assets/2.png" : 'assets/1.png',
+                        width: 132,
+                        height: 156,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  )
+                ]),
+              ));
         }),
   );
 }
